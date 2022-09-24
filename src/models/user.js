@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate(value) {
-      if (!validatePhone(value) && value[0] != 0) {
+      if (!validatePhone(value) && value[0] != '0') {
         throw new Error("Phone is invalid");
       }
     },
